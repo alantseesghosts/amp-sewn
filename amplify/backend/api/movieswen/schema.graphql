@@ -10,3 +10,16 @@ type Todo @model @auth(rules: [{allow: public}]) {
   after_negative: Float
   metacritic: Float
 }
+
+type Query {
+  listSentimentData(filter: ModelSentimentDataFilterInput, limit: Int, nextToken: String): ModelSentimentDataConnection
+}
+
+input ModelSentimentDataFilterInput {
+  # Define your filter fields here
+}
+
+type ModelSentimentDataConnection {
+  items: [ModelSentimentData]
+  nextToken: String
+}
