@@ -22,5 +22,71 @@
       "service": "AppSync"
     }
   },
-  "function": {}
+  "function": {},
+  "parameters": {
+    "AMPLIFY_storage_SentimentData_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "SentimentData"
+        }
+      ]
+    },
+    "AMPLIFY_storage_SentimentData_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "SentimentData"
+        }
+      ]
+    },
+    "AMPLIFY_storage_SentimentData_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "SentimentData"
+        }
+      ]
+    },
+    "AMPLIFY_storage_SentimentData_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "SentimentData"
+        }
+      ]
+    },
+    "AMPLIFY_storage_SentimentData_sortKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "SentimentData"
+        }
+      ]
+    },
+    "AMPLIFY_storage_SentimentData_sortKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "SentimentData"
+        }
+      ]
+    },
+    "AMPLIFY_storage_SentimentData_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "SentimentData"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "SentimentData": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    }
+  }
 }

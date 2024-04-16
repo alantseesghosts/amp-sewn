@@ -9,7 +9,7 @@ import { Amplify } from 'aws-amplify';
 import { generateClient } from 'aws-amplify/api';
 import config from './amplifyconfiguration.json';
 import { createTodo, updateTodo, deleteTodo } from './graphql/mutations';
-import { listTodos } from './graphql/queries';
+import { listSentimentDatas } from './graphql/queries';
 Amplify.configure(config);
 
 
@@ -30,7 +30,7 @@ const newTodo = await client.graphql({
   }
 });
 */
-const result = await client.graphql({ query: listTodos });
+const result = await client.graphql({ query: listSentimentDatas });
 console.log(result);
 
 
@@ -49,21 +49,24 @@ function App() {
   }, []);
   async function fetchData() {
     try {
-      const result = await client.graphql({ query: listTodos });
-      setData(result.data.listTodos.items);
+      const result = await client.graphql({ query: listSentimentDatas });
+      setData(result.data.listSentimentData.items);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   }
   const games = data.map(item => ({
-    title: item.name, 
-    src: item.img_link, 
-    link: `/${item.name}`, 
-    neutral: item.before_neutral,
-    positive: item.before_pos,
-    negative: item.before_negative,
-    description: item.description,
-    metacritic: item.metacritic
+    title: item.Game, 
+    src: item.Image, 
+    link: `/${item.Game}`, 
+    neutral: item.Neutral,
+    positive: item.Positive,
+    negative: item.Negative,
+    description: item.Description,
+    platform:    item.Platforms,
+    genre:    item.Genre,
+    release:   item.ReleaseDate,
+    metacritic: item.Metacritic
   }));
 
   /*[
@@ -91,6 +94,7 @@ function App() {
   return (
     <Router>
       <div className="container">
+      <div className="center-text">S.A.B.E.R</div>
         <div className="main-content">
           <Routes>
             <Route path="/" element={

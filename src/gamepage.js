@@ -49,7 +49,7 @@ function GamePage({ game }) {
         <div className="description">
           <p>Description:
             {game.description}</p>
-          <p>Release Date: {game.releaseDate}</p>
+          <p>Release Date: {game.release}</p>
           <p>Genre: {game.genre}</p>
           <p>Platform: {game.platform}</p>
         </div>

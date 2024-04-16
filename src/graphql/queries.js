@@ -13,22 +13,25 @@ export const getTodo = /* GraphQL */ `
     }
   }
 `;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
+export const listSentimentDatas = /* GraphQL */ `
+  query ListSentimentDatas(
+    $filter: ModelSentimentDataFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listSentimentData(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
-        id
-        name
-        description
-        img_link
-        before_pos
-        before_neutral
-        before_negative
-        metacritic
+        Game
+        Sentiment
+        Description
+        Image
+        Positive
+        Neutral
+        Negative
+        Platforms
+        ReleaseDate
+        Genre
+        Metacritic
       }
       nextToken
       __typename

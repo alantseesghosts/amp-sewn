@@ -33,13 +33,13 @@
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Todo",
+            "name" : "SentimentData",
             "ofType" : null
           },
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "listTodos",
+          "name" : "listSentimentData",
           "description" : null,
           "args" : [ {
             "name" : "filter",
@@ -83,7 +83,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "OBJECT",
-        "name" : "Todo",
+        "name" : "SentimentData",
         "description" : null,
         "fields" : [ {
           "name" : "id",

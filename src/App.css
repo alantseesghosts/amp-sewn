@@ -1,8 +1,16 @@
-/* styles.css */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.center-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  font-family:monospace;
 }
 
 .main-content {

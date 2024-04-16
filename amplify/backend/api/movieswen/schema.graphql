@@ -10,4 +10,3 @@ type Todo @model @auth(rules: [{allow: public}]) {
   after_negative: Float
   metacritic: Float
 }
- 

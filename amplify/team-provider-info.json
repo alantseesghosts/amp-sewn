@@ -14,6 +14,17 @@
     "categories": {
       "api": {
         "movieswen": {}
+      },
+      "storage": {
+        "SentimentData": {
+          "tableName": "SentimentData",
+          "region": "us-east-1",
+          "arn": "arn:aws:dynamodb:us-east-1:590184071980:table/SentimentData",
+          "partitionKeyName": "Game",
+          "partitionKeyType": "S",
+          "sortKeyName": "Sentiment",
+          "sortKeyType": "S"
+        }
       }
     }
   }
