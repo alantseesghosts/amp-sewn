@@ -67,7 +67,7 @@ function App() {
   const games = data.map(item => ({
     title: item.title, 
     src: item.src, 
-    link: `/${item.title}`, 
+    link: `/game/${item.title.toLowerCase().replace(/\s+/g, '-')}`, 
     neutral: item.neu,
     positive: item.pos,
     negative: item.neg,
@@ -109,7 +109,7 @@ return (
           <Route path="/" element={
             <div>
               {games.map((game, index) => (
-                <GameCard key={index} title={game.title} src={game.src} link={`/${game.title}`} />
+                <GameCard key={index} title={game.title} src={game.src} link={game.link} />
               ))}
             </div>
           } />
