@@ -21,12 +21,12 @@ const newTodo = await client.graphql({
       input: {
   "title": "Lorem ipsum dolor sit amet",
   "description": "Lorem ipsum dolor sit amet",
-  "price": 1020,
+  "price": 70,
   "platform": "Lorem ipsum dolor sit amet",
   "src": "Lorem ipsum dolor sit amet",
   "releaseDate": "Lorem ipsum dolor sit amet",
   "genre": "Lorem ipsum dolor sit amet",
-  "metacritic": 1020,
+  "metacritic": 20,
   "pos": 123.45,
   "neg": 123.45,
   "neu": 123.45
@@ -60,9 +60,9 @@ function App() {
     }
   }
   const games = data.map(item => ({
-    title: item.name, 
-    src: item.img_link, 
-    link: `/${item.name}`, 
+    title: item.title, 
+    src: item.src, 
+    link: `/${item.title}`, 
     neutral: item.before_neutral,
     positive: item.before_pos,
     negative: item.before_negative,
