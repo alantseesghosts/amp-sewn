@@ -22,3 +22,12 @@ body{
   /*background-color: #41495a;*/
   background-color: #283044;
 }
+.center-text{
+  font-family: sans-serif;
+  color:white;
+  padding-left: 450px;
+  font-size: 50px;
+}
+.filters{
+  color:white;
+}

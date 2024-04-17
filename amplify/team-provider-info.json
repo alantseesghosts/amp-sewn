@@ -17,6 +17,9 @@
       },
       "storage": {
         "SentimentData": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
       }
     }
   }
