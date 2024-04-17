@@ -19,13 +19,17 @@ const newTodo = await client.graphql({
   query: createTodo,
   variables: {
       input: {
-  "name": "Ghosts of Tsushima",
-  "description": "Uncover the hidden wonders of Tsushima in this open-world action adventure from Sucker Punch Productions and PlayStation Studios, available for PS5 and PS4.\nForge a new path and wage an unconventional war for the freedom of Tsushima. Challenge opponents with your katana, master the bow to eliminate distant threats, develop stealth tactics to ambush enemies and explore a new story on Iki Island.",
-  "img_link": "https://image.api.playstation.com/vulcan/ap/rnd/202010/0222/b3iB2zf2xHj9shC0XDTULxND.png",
-  "before_pos": 0.7056629657745361,
-  "before_neutral": 0.032207898795604706,
-  "before_negative": 0.032207898795604706,
-  "metacritic": 83.0
+  "title": "Lorem ipsum dolor sit amet",
+  "description": "Lorem ipsum dolor sit amet",
+  "price": 1020,
+  "platform": "Lorem ipsum dolor sit amet",
+  "src": "Lorem ipsum dolor sit amet",
+  "releaseDate": "Lorem ipsum dolor sit amet",
+  "genre": "Lorem ipsum dolor sit amet",
+  "metacritic": 1020,
+  "pos": 123.45,
+  "neg": 123.45,
+  "neu": 123.45
 }
   }
 });

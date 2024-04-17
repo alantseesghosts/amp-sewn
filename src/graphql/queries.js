@@ -21,14 +21,17 @@ export const listTodos = /* GraphQL */ `
   ) {
     listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
-        id
-        name
-        description
-        img_link
-        before_pos
-        before_neutral
-        before_negative
+        title
+        description 
+        price 
+        platform
+        src
+        releaseDate
+        genre
         metacritic
+        pos
+        neg
+        neu
       }
       nextToken
       __typename
