@@ -91,6 +91,7 @@ function App() {
   return (
     <Router>
       <div className="container">
+      <div className="center-text">S.A.B.E.R</div>
         <div className="main-content">
           <Routes>
             <Route path="/" element={
