@@ -10,6 +10,11 @@ import { generateClient } from 'aws-amplify/api';
 import config from './amplifyconfiguration.json';
 import { createTodo, updateTodo, deleteTodo } from './graphql/mutations';
 import { listTodos } from './graphql/queries';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
 Amplify.configure(config);
 
 
@@ -63,11 +68,14 @@ function App() {
     title: item.title, 
     src: item.src, 
     link: `/${item.title}`, 
-    neutral: item.before_neutral,
-    positive: item.before_pos,
-    negative: item.before_negative,
+    neutral: item.neu,
+    positive: item.pos,
+    negative: item.neg,
     description: item.description,
-    metacritic: item.metacritic
+    metacritic: item.metacritic,
+    genre:item.genre,
+    platform:item.platform,
+    releaseDate: item.releaseDate
   }));
 
   /*[
@@ -92,27 +100,28 @@ function App() {
 */
 
 
-  return (
-    <Router>
-      <div className="container">
+return (
+  <Router>
+    <div className="container">
       <div className="center-text">S.A.B.E.R</div>
-        <div className="main-content">
-          <Routes>
-            <Route path="/" element={
-              <Collection items={games} type="list" direction="row" gap="20px" wrap="nowrap">
-                {(item, index) => (
-                  <GameCard key={index} {...item} />
-                )}
-              </Collection>
-            } />
-            {games.map((game) => (
-              <Route key={game.title} path={game.link} element={<GamePage game={game} />} />
-            ))}
-          </Routes>
-        </div>
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={
+            <div>
+              {games.map((game, index) => (
+                <GameCard key={index} title={game.title} src={game.src} link={`/${game.title}`} />
+              ))}
+            </div>
+          } />
+          {games.map((game) => (
+            <Route key={game.title} path={game.link} element={<GamePage game={game} />} />
+          ))}
+        </Routes>
       </div>
-    </Router>
-  );
+    </div>
+  </Router>
+);
+
 }
 
 export default App;
