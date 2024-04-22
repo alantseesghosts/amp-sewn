@@ -1,17 +1,37 @@
 {
   "projectName": "movieswen",
-  "version": "3.1",
-  "frontend": "javascript",
-  "javascript": {
-    "framework": "react",
-    "config": {
-      "SourceDir": "src",
-      "DistributionDir": "build",
-      "BuildCommand": "npm run-script build",
-      "StartCommand": "npm run-script start"
+  "version": "1",
+  "backend": {
+    "phases": {
+      "build": {
+        "commands": {
+          "# Execute Amplify CLI with the helper script",
+          "amplifyPush --simple"
+        }
+      }
     }
   },
-  "providers": [
-    "awscloudformation"
-  ]
+  "frontend": {
+    "phases": {
+      "preBuild": {
+        "commands": {
+          "npm ci"
+        }
+      },
+      "build": {
+        "commands": {
+          "npm run build"
+        }
+      }
+    },
+    "artifacts": {
+      "baseDirectory": "build",
+      "files": "**/*"
+    },
+    "cache": {
+      "paths": {
+        "node_modules/**/*"
+      }
+    }
+  }
 }
