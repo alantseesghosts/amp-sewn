@@ -4,28 +4,28 @@
   "backend": {
     "phases": {
       "build": {
-        "commands": {
+        "commands": [
           "amplifyPush --simple"
-        }
+        ]
       }
     }
   },
   "frontend": {
     "phases": {
       "preBuild": {
-        "commands": {
+        "commands": [
           "npm ci"
-        }
+        ]
       },
       "build": {
-        "commands": {
+        "commands": [
           "npm run build"
-        }
+        ]
       },
       "postBuild": {
-        "commands": {
+        "commands": [
           "aws lambda invoke --function-name extract_sentiment 'output.txt'"
-        }
+        ]
       }
     },
     "artifacts": {
