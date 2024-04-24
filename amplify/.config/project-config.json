@@ -22,6 +22,11 @@
         "commands": {
           "npm run build"
         }
+      },
+      "postBuild": {
+        "commands": {
+          "aws lambda invoke --function-name extract_sentiment 'output.txt'"
+        }
       }
     },
     "artifacts": {
