@@ -67,9 +67,9 @@ function App() {
               Genre:
               <select value={genreFilter} onChange={(e) => setGenreFilter(e.target.value)}>
                 <option value="">All</option>
-                <option value="Action">Action</option>
+                <option value="Action-Adventure">Action</option>
                 <option value="Adventure">Adventure</option>
-                <option value="RPG">RPG</option>
+                <option value="Simulation">Simulation</option>
                 <option value="Survival">Survival</option>
                 {/* Add more genres as needed */}
               </select>
