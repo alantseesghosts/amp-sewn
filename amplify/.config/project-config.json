@@ -1,15 +1,5 @@
 {
-  "projectName": "movieswen",
   "version": "1",
-  "backend": {
-    "phases": {
-      "build": {
-        "commands": [
-          "amplifyPush --simple"
-        ]
-      }
-    }
-  },
   "frontend": {
     "phases": {
       "preBuild": {
@@ -30,11 +20,22 @@
     },
     "artifacts": {
       "baseDirectory": "build",
-      "files": "**/*"
+      "files": [
+        "**/*"
+      ]
     },
     "cache": {
-      "paths": {
+      "paths": [
         "node_modules/**/*"
+      ]
+    }
+  },
+  "backend": {
+    "phases": {
+      "build": {
+        "commands": [
+          "amplifyPush --simple"
+        ]
       }
     }
   }
